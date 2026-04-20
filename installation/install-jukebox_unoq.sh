@@ -11,8 +11,8 @@
 export LC_ALL=C
 
 # Set Repo variables if not specified when calling the script
-GIT_USER=${GIT_USER:-"MiczFlor"}
-GIT_BRANCH=${GIT_BRANCH:-"future3/main"}
+GIT_USER=${GIT_USER:-"MMihaus"}
+GIT_BRANCH=${GIT_BRANCH:-"feat/add_arduino_uno_q_installer"}
 
 # Constants
 GIT_REPO_NAME="RPi-Jukebox-RFID"
@@ -127,11 +127,11 @@ _download_jukebox_source() {
 
 _load_sources() {
     # Load / Source dependencies
-    for i in "${INSTALLATION_PATH}"/installation/rpi/includes/*; do
+    for i in "${INSTALLATION_PATH}"/installation/uno_q/includes/*; do
         source "$i" || exit_on_error
     done
 
-    for j in "${INSTALLATION_PATH}"/installation/rpi/routines/*; do
+    for j in "${INSTALLATION_PATH}"/installation/uno_q/routines/*; do
         source "$j" || exit_on_error
     done
 }
