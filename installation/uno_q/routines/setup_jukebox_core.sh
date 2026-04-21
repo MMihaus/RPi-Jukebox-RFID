@@ -12,7 +12,7 @@ JUKEBOX_SERVICE_NAME="${SYSTEMD_USR_PATH}/jukebox-daemon.service"
 _jukebox_core_install_os_dependencies() {
     print_lc "  Install Jukebox OS dependencies"
 
-    local apt_packages=$(get_args_from_file "${INSTALLATION_PATH}/packages-core_uno.txt")
+    local apt_packages=$(get_args_from_file "${INSTALLATION_PATH}/packages-core_unoq.txt")
     sudo apt-get -y update && sudo apt-get -y install \
         $apt_packages \
         --no-install-recommends \
@@ -51,7 +51,7 @@ _jukebox_core_install_python_requirements() {
         _jukebox_core_build_and_install_lg
     fi
 
-    pip install --no-cache-dir -r "${INSTALLATION_PATH}/requirements_uno.txt"
+    pip install --no-cache-dir -r "${INSTALLATION_PATH}/requirements_unoq.txt"
 }
 
 _jukebox_core_configure_pulseaudio() {
@@ -133,12 +133,12 @@ _jukebox_core_register_as_service() {
 _jukebox_core_check() {
     print_verify_installation
 
-    local apt_packages=$(get_args_from_file "${INSTALLATION_PATH}/packages-core.txt")
+    local apt_packages=$(get_args_from_file "${INSTALLATION_PATH}/packages-core_unoq.txt")
     verify_apt_packages $apt_packages
 
     verify_dirs_exists "${VIRTUAL_ENV}"
 
-    local pip_modules=$(get_args_from_file "${INSTALLATION_PATH}/requirements.txt")
+    local pip_modules=$(get_args_from_file "${INSTALLATION_PATH}/requirements_unoq.txt")
     verify_pip_modules pyzmq $pip_modules
 
     local pip_modules_excluded=$(get_args_from_file "${INSTALLATION_PATH}/requirements-excluded.txt")
