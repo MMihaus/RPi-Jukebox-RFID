@@ -174,7 +174,7 @@ _run_setup_jukebox_core() {
     _jukebox_core_install_os_dependencies
     _jukebox_core_install_python_requirements
     _jukebox_core_build_and_install_pyzmq
-    if [[ BUILD_TARGET ]]; then
+    if [[ BUILD_TARGET != "uno_q" ]]; then
         _jukebox_core_configure_pulseaudio
     fi
     _jukebox_core_install_settings

@@ -1,6 +1,8 @@
 # Define packages for apt-get.  These can be installed with
 # 'sed 's/#.*//g' packages-core.txt | xargs apt-get -y install --no-install-recommends'
 
+build-essential
+libzmq3-dev
 at
 alsa-utils
 caps

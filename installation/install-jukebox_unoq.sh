@@ -2,7 +2,7 @@
 # One-line install script for the Jukebox Version 3
 #
 # To install, simply execute
-# cd; bash <(wget -qO- https://raw.githubusercontent.com/MiczFlor/RPi-Jukebox-RFID/future3/develop/installation/install-jukebox.sh)
+# cd; bash <(wget -qO- https://raw.githubusercontent.com/MMihaus/RPi-Jukebox-RFID/feat/add_arduino_uno_q_installer/installation/install-jukebox.sh)
 #
 # If you want to get a specific branch or a different repository (mainly for developers)
 # you may specify them like this
@@ -41,8 +41,8 @@ _setup_logging() {
     echo "Log start: ${INSTALL_ID}"
 }
 
-# Function to log to both console and logfile
 print_lc() {
+    # Function to log to both console and logfile
     local message="$1"
     echo -e "$message" | tee /dev/fd/3
 }
