@@ -2,6 +2,10 @@
 # 'sed 's/#.*//g' packages-core.txt | xargs apt-get -y install --no-install-recommends'
 
 build-essential
+pipewire
+pipewire-pulse
+pipewire-audio-client-libraries
+wireplumber
 libzmq3-dev
 at
 alsa-utils
