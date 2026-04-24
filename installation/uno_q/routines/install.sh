@@ -12,6 +12,7 @@ install() {
     setup_kiosk_mode
     setup_rfid_reader
     setup_autohotspot
+    setup_unoq_os.sh
     setup_postinstall
     cleanup
 }

@@ -9,6 +9,6 @@ _run_update_os() {
 
 update_os() {
     if [ "$UPDATE_RASPI_OS" == true ]; then
-        run_with_log_frame _run_update_raspi_os "Updating OS"
+        run_with_log_frame _run_update_os "Updating OS"
     fi
 }

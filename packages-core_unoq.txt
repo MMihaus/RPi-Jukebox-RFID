@@ -6,6 +6,8 @@ pipewire
 pipewire-pulse
 pipewire-audio-client-libraries
 wireplumber
+pulseaudio-utils
+libpulse0
 libzmq3-dev
 at
 alsa-utils
