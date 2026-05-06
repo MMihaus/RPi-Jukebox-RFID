@@ -30,7 +30,7 @@ sudo usermod -a -G audio,bluetooth,dialout "$CURRENT_USER"
 }
 
 _setup_envvars() {
-# 6. Add Environment Variables to .bashrc for PulseAudio compatibility
+# Add Environment Variables to .bashrc for PulseAudio compatibility
 print_lc "Adding PulseAudio environment variables to .bashrc..."
 if ! grep -q "PULSE_SERVER" "/home/$CURRENT_USER/.bashrc"; then
   echo "export XDG_RUNTIME_DIR=/run/user/\$(id -u)" >>"/home/$CURRENT_USER/.bashrc"
@@ -38,14 +38,9 @@ if ! grep -q "PULSE_SERVER" "/home/$CURRENT_USER/.bashrc"; then
 fi
 }
 
-_setup_wireplumber_config() {
-  # Copy config file increasing bluetooth speakers
-}
-
 _setup_unoq_os() {
   _setup_autologin
   _setup_envvars
-  _setup_wireplumber_config
 }
 
 setup_unoq_os() {

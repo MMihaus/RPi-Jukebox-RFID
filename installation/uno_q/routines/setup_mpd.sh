@@ -28,7 +28,7 @@ _mpd_configure() {
   # MPD will be setup as user process (rather than a system-wide process)
   mkdir -p $(dirname "$MPD_CONF_PATH")
 
-  cp -f "${INSTALLATION_PATH}/resources/default-settings/mpd.default.conf" "${MPD_CONF_PATH}"
+  cp -f "${INSTALLATION_PATH}/resources/default-settings/mpd.uno_default.conf" "${MPD_CONF_PATH}"
 
   # Prepare new mpd.conf
   sed -i 's|%%JUKEBOX_AUDIOFOLDERS_PATH%%|'"$AUDIOFOLDERS_PATH"'|' "${MPD_CONF_PATH}"
