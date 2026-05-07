@@ -13,6 +13,7 @@ install() {
     setup_rfid_reader
     setup_autohotspot
     setup_unoq_os.sh
+    setup_mcu_firmware.sh
     setup_postinstall
     cleanup
 }
